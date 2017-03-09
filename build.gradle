@@ -97,6 +97,7 @@ task myZip(type: Zip) {
     exclude '**/build/**'
     exclude '**/out/**'
     exclude '**/target/**'
+    exclude '**/*.lock'
     /*
     exclude {
         details ->
