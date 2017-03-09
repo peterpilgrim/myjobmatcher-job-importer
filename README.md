@@ -17,7 +17,14 @@ I used Java properties to configure the XML element tag names.
 I am unfamiliar with the Elastic Search API. 
   
 
-I used an old  Astah UML Professional (version 6) to create a UML sequence diagram. You can find the UML diagram under the folder `src/design' 
+I used an old [Astah UML Professional (version 6)](http://astah.net/editions/professional) to create the UML sequence diagram. You can find the UML diagram under the folder `src/design' 
+
+
+
+![UML Sequence Diagram for the exercise](src/design/SD01%20Job%20Bundle%20Importer.png)
+
+
+
 
 ## TODO
 
