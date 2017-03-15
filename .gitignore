@@ -31,6 +31,7 @@ classes/*.class
 *.swp
 .idea
 .idea/*
+**/*.lock
 
 
 # Compiled source #
