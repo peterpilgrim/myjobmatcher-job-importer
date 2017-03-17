@@ -29,18 +29,16 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 /**
- * A unit test JobBundleReaderTest to verify the operation of JobBundleReaderTest
+ * A unit test JobBundleReaderTest to verify the operation of JobBundleReader
  *
  * @author Peter Pilgrim
  */
 public class JobBundleReaderTest {
 
-
     private JobConfigurationPropertiesLoader configuration;
 
     @Before
     public void setup() throws IOException {
-
         final InputStream is = this.getClass().getResourceAsStream(CommonTestFixtures.TEST_JOB_BUNDLE_CONFIGURATION_FILE);
         configuration = new JobConfigurationPropertiesLoader();
         configuration.load(is);

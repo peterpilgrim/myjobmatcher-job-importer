@@ -22,9 +22,6 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import java.io.InputStream;
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.charset.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,38 +33,7 @@ import java.util.List;
  */
 public class JobBundleReader {
 
-    private static CharsetEncoder isoEncoder = Charset.forName("ISO-8859-1").newEncoder();
-    private static CharsetDecoder utf8Decoder = Charset.forName("UTF-8").newDecoder();
-
-    static {
-        // Instruct the US-ASCII encoder to ignore malformed and unmappable characters
-        isoEncoder.onMalformedInput(CodingErrorAction.IGNORE);
-        isoEncoder.onUnmappableCharacter(CodingErrorAction.IGNORE);
-
-        // Extra bit: instruct our UTF-8 decoder to map malformed and unmapped characters to '?'
-        utf8Decoder.onMalformedInput(CodingErrorAction.REPLACE);
-        utf8Decoder.onUnmappableCharacter(CodingErrorAction.REPLACE);
-        utf8Decoder.replaceWith("?");
-    }
-
-    private static String notNullAndNormalise(String x) {
-        if (x == null)
-            return "";
-        else {
-            // See also: http://stackoverflow.com/questions/240546/remove-html-tags-from-a-string
-            x = x.trim().replaceAll("\\<[^>]*>", "");
-
-            // Remove UTF-8 characters
-            try {
-                CharBuffer charBuffer = CharBuffer.wrap(x);
-                ByteBuffer encodeBuffer = isoEncoder.encode(charBuffer);
-                CharBuffer decodeBuffer = utf8Decoder.decode(encodeBuffer);
-                return decodeBuffer.toString();
-            } catch (CharacterCodingException e) {
-                throw new RuntimeException("failure to apply encoding", e);
-            }
-        }
-    }
+    private Mapper mapper = new MapperDefault();
 
     public List<JobRecord> load(final JobConfigurationPropertiesLoader configuration, final InputStream is) {
 
@@ -87,22 +53,7 @@ public class JobBundleReader {
 //                    System.out.printf("startElement = localName: [%s] inside:%s\n", streamReader.getLocalName(), insideSentinel);
 
                     if (insideSentinel) {
-                        final String localName = streamReader.getLocalName();
-                        if (configuration.getTitleElementName().equalsIgnoreCase(localName)) {
-                            jobRecord.setTitle(notNullAndNormalise(streamReader.getElementText()));
-                        }
-                        if (configuration.getDescriptionElementName().equalsIgnoreCase(localName)) {
-                            jobRecord.setDescription(notNullAndNormalise(streamReader.getElementText()));
-                        }
-                        if (configuration.getLocationElementName().equalsIgnoreCase(localName)) {
-                            jobRecord.setLocation(notNullAndNormalise(streamReader.getElementText()));
-                        }
-                        if (configuration.getReferenceElementName().equalsIgnoreCase(localName)) {
-                            jobRecord.setReference(notNullAndNormalise(streamReader.getElementText()));
-                        }
-                        if (configuration.getUrlElementName().equalsIgnoreCase(localName)) {
-                            jobRecord.setUrl(notNullAndNormalise(streamReader.getElementText()));
-                        }
+                        mapper.mapXmlPropertiesToJobRecord(configuration, streamReader, jobRecord);
                     }
                 }
 
@@ -122,5 +73,7 @@ public class JobBundleReader {
 
         return jobRecords;
     }
+
+
 }
 
