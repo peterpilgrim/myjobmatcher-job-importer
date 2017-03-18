@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<acme>
+    <title>XANADU JOBS</title>
+    <jobs>
+        <job>
+            <id>742341973514</id>
+            <jobTitle>
+                Agile SCRUM Master
+            </jobTitle>
+            <jobDescription>
+                Digital delivery for Polaris Software
+            </jobDescription>
+            <employeeAgent>
+                Cap Gemini Services
+            </employeeAgent>
+            <postedDate>
+                09 Mar 2017 12:56
+            </postedDate>
+            <location>
+                NEWCASTLE 〠.〠
+            </location>
+            <jobRefId>
+                AGILE.SCRUM.POLARIS.1234
+            </jobRefId>
+            <applyUrl>
+                https://www.jobserve.com/
+            </applyUrl>
+            <contact>
+                <email>
+                    rebecca.stanton@capgemini.com
+                </email>
+                <telephone>
+                    0123 456 789
+                </telephone>
+            </contact>
+        </job>
+    </jobs>
+</acme>

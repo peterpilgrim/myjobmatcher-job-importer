@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<acme>
+    <title>ACME JOBS</title>
+    <jobs>
+        <job>
+            <id>742341973514</id>
+            <jobTitle>
+                Technical/Software Architect
+            </jobTitle>
+            <jobDescription>
+                Sopra Steria Recruitment is working in partnership with a major public sector client in the UK. We are
+                currently recruiting a... Show more Technical Architect to be based in 2 Marsham Street with a potential
+                move to Victoria Office in September for an initial period of six months with possible extension Skills and
+                experience Solid development experience (5+ years) Microservice experience Keen interest in Industry trends
+                and their application Experience designing HA applications Technical process design Good documentation
+                skills (UML and architecture) Nice-to-have skills and experience Node.js or Java Development skills Strong
+                understanding of Agile Delivery Automated testing experience Open Source Experience Experience with CI and
+                Kanban/Scrum Strong understanding of Agile Delivery
+            </jobDescription>
+            <employeeAgent>
+                Sopra Steria Recruitment Limited
+            </employeeAgent>
+            <postedDate>
+                09 Mar 2017 12:56
+            </postedDate>
+            <location>
+                LONDON 〠.〠
+            </location>
+            <jobRefId>
+                JS_SOFTWARE ARCHITECT_AC_2051
+            </jobRefId>
+            <applyUrl>
+                https://www.jobserve.com/W1118294FB0EE26FB.jsap?src=D4C01DF1DAFBC22C9635&amp;pf=EB716A0BB1DA9A3A68E7&amp;utm_source=00001&amp;utm_medium=Email2014&amp;utm_campaign=InstantJob2
+            </applyUrl>
+            <contact>
+                <email>
+                    Amrita.Chaudhri@soprasteria.com
+                </email>
+                <telephone>
+                    0123 456 789
+                </telephone>
+            </contact>
+        </job>
+    </jobs>
+</acme>

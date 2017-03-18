@@ -15,7 +15,7 @@ public class NormalizerDefaultTest {
 
     public static final String UTF8_TEXT = "abcdefghijklmnopqrstuvwxyz0123456789";
     public static final String NON_UTF8_TEXT_INPUT = "LONDON 〠.〠";
-    public static final String NON_UTF8_TEXT_OUTPUT = "LONDON .";
+    public static final String NON_UTF8_TEXT_OUTPUT = "LONDON ?.?";
     private Normalizer normalizer;
 
     @Before
