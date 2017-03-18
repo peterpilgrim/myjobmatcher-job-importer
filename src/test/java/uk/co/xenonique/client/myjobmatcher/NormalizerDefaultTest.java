@@ -15,7 +15,7 @@ public class NormalizerDefaultTest {
 
     public static final String UTF8_TEXT = "abcdefghijklmnopqrstuvwxyz0123456789";
     public static final String NON_UTF8_TEXT_INPUT = "LONDON 〠.〠";
-    public static final String NON_UTF8_TEXT_OUTPUT = "LONDON ?.?";
+    public static final String NON_UTF8_TEXT_OUTPUT = "LONDON .";
     private Normalizer normalizer;
 
     @Before
@@ -24,12 +24,13 @@ public class NormalizerDefaultTest {
     }
 
     @Test
+    public void normalize_test_with_non_utf8_characters() {
+        assertThat(normalizer.notNullAndNormalise(NON_UTF8_TEXT_INPUT), is(NON_UTF8_TEXT_OUTPUT));
+    }
+
+    @Test
     public void normalize_test_with_utf8_characters() {
         assertThat(normalizer.notNullAndNormalise(UTF8_TEXT), is(UTF8_TEXT));
     }
 
-    @Test
-    public void normalize_test_with_non_utf8_characters() {
-        assertThat(normalizer.notNullAndNormalise(NON_UTF8_TEXT_INPUT), is(NON_UTF8_TEXT_OUTPUT));
-    }
 }

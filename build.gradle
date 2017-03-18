@@ -44,9 +44,12 @@ idea.module {
 dependencies {
     compile     "javax:javaee-api:7.0"
 
-    compile( "org.jboss.weld.se:weld-se-core:3.0.0.CR2") {
+
+    compile( "org.jboss.weld.se:weld-se-core:2.2.4.Final") {
     }
 //    runtime "org.jboss.weld.se:weld-se-core:3.0.0.CR2"
+    compile     "org.jboss.weld:weld-core:2.2.4.Final"
+    compile     "org.jboss:jandex:1.2.2.Final"
 
     testCompile "junit:junit:4.12"
     testCompile 'org.hamcrest:hamcrest-all:1.3'

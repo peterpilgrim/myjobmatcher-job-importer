@@ -14,6 +14,6 @@ public class MainApplication {
 
         WeldContainer container = weld.initialize();
 
-        container.select(JobImporterApplication.class).get().importJobs();
+        container.instance().select(JobImporterApplication.class).get().importJobs();
     }
 }
