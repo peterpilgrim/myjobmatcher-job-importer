@@ -61,7 +61,12 @@ Run the unit tests
     
     
     
-    
+## Additional Notes
+
+Weld SE standalone dependencies for version 2.2.4.Final
+
+http://stackoverflow.com/questions/25396614/does-cdi-work-for-regular-java-application
+   
 
 
 # Credits
