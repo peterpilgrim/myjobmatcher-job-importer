@@ -1,5 +1,6 @@
 package uk.co.xenonique.client.myjobmatcher;
 
+import javax.inject.Inject;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
@@ -10,7 +11,8 @@ import javax.xml.stream.XMLStreamReader;
  */
 public class MapperDefault implements Mapper {
 
-    private Normalizer normalizer = new NormalizerDefault();
+    @Inject
+    private Normalizer normalizer;
 
 
     @Override

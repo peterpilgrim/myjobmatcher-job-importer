@@ -35,6 +35,7 @@ public class MapperDefaultTest {
         configuration = new JobConfigurationPropertiesLoader();
         configuration.load(is);
         mapper = new MapperDefault();
+        mapper.setNormalizer(new NormalizerDefault());
     }
 
     @Test

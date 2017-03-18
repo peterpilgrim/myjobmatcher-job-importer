@@ -18,6 +18,7 @@
  *******************************************************************************/
 package uk.co.xenonique.client.myjobmatcher;
 
+import javax.inject.Inject;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
@@ -33,7 +34,8 @@ import java.util.List;
  */
 public class JobBundleReader {
 
-    private Mapper mapper = new MapperDefault();
+    @Inject
+    private Mapper mapper;
 
     public List<JobRecord> load(final JobConfigurationPropertiesLoader configuration, final InputStream is) {
 
@@ -72,6 +74,10 @@ public class JobBundleReader {
         }
 
         return jobRecords;
+    }
+
+    public void setMapper(Mapper mapper) {
+        this.mapper = mapper;
     }
 
 

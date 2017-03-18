@@ -35,7 +35,7 @@ public class ElasticExporter {
 
         for (JobRecord jobRecord : jobRecordList) {
 
-            // Save each record;
+            System.out.printf("export to Elastic API jobRecord=%s\n", jobRecord );
         }
 
         // Close the session to ElasticSearch

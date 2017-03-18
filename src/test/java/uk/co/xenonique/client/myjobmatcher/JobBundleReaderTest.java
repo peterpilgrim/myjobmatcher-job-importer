@@ -48,6 +48,9 @@ public class JobBundleReaderTest {
     public void read_bundle() throws IOException {
         final InputStream is = this.getClass().getResourceAsStream(CommonTestFixtures.TEST_JOB_BUNDLE_DATA_FILE);
         final JobBundleReader reader = new JobBundleReader();
+        final Mapper mapper = new MapperDefault();
+        mapper.setNormalizer(new NormalizerDefault());
+        reader.setMapper( mapper);
         final List<JobRecord> jobRecordList = reader.load(configuration, is);
         assertThat(jobRecordList, is(notNullValue()));
         assertThat(jobRecordList.size(), is(1));
