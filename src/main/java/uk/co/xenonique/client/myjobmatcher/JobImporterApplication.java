@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import static jdk.nashorn.internal.objects.Global.load;
-
 /**
  * The type JobImporterApplication
  *
