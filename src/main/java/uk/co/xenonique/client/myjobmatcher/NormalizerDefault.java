@@ -18,6 +18,7 @@
  *******************************************************************************/
 package uk.co.xenonique.client.myjobmatcher;
 
+import javax.inject.Singleton;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.*;
@@ -27,6 +28,7 @@ import java.nio.charset.*;
  *
  * @author Peter Pilgrim (peter)
  */
+@Singleton
 public class NormalizerDefault implements Normalizer {
 
     private final CharsetEncoder isoEncoder = Charset.forName("ISO-8859-1").newEncoder();

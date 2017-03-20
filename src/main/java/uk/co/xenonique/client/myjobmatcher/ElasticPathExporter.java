@@ -21,23 +21,11 @@ package uk.co.xenonique.client.myjobmatcher;
 import java.util.List;
 
 /**
- * The type ElasticExporter
+ * The type ElasticPathExporter
  *
  * @author Peter Pilgrim (peter)
  */
-public class ElasticExporter {
-
+public interface ElasticPathExporter {
     // Connection URL properties to go here
-
-    public void exportBundle(List<JobRecord> jobRecordList) {
-
-        // Open the session to ElasticSearch
-
-        for (JobRecord jobRecord : jobRecordList) {
-
-            System.out.printf("export to Elastic API jobRecord=%s\n", jobRecord);
-        }
-
-        // Close the session to ElasticSearch
-    }
+    void exportBundle(List<JobRecord> jobRecordList);
 }

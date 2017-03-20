@@ -50,7 +50,7 @@ public class JobBundleReaderDefaultTest {
         final JobBundleReader reader = new JobBundleReaderDefault();
         final Mapper mapper = new MapperDefault();
         mapper.setNormalizer(new NormalizerDefault());
-        reader.setMapper( mapper);
+        reader.setMapper(mapper);
         final List<JobRecord> jobRecordList = reader.load(configuration, is);
         assertThat(jobRecordList, is(notNullValue()));
         assertThat(jobRecordList.size(), is(1));

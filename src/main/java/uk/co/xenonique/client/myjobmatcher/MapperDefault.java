@@ -19,6 +19,7 @@
 package uk.co.xenonique.client.myjobmatcher;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
@@ -27,6 +28,7 @@ import javax.xml.stream.XMLStreamReader;
  *
  * @author Peter Pilgrim (peter)
  */
+@Singleton
 public class MapperDefault implements Mapper {
 
     @Inject

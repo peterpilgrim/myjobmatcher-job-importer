@@ -41,7 +41,7 @@ public class JobImporterApplication {
     @Inject
     private JobConfigurationPropertiesLoader propertiesLoader;
     @Inject
-    private ElasticExporter exporter;
+    private ElasticPathExporter exporter;
 
     public void importJobs() {
 

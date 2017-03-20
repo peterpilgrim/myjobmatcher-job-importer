@@ -19,6 +19,7 @@
 package uk.co.xenonique.client.myjobmatcher;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
@@ -32,6 +33,7 @@ import java.util.List;
  *
  * @author Peter Pilgrim (peter)
  */
+@Singleton
 public class JobBundleReaderDefault implements JobBundleReader {
 
     @Inject
