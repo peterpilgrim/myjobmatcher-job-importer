@@ -23,12 +23,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * The type ElasticPathExporterProxy
+ * The type ElasticSearchExporterProxy
  *
  * @author Peter Pilgrim (peter)
  */
 @Singleton
-public class ElasticPathExporterProxy implements ElasticPathExporter {
+public class ElasticSearchExporterProxy implements ElasticSearchExporter {
 
     private List<JobRecord> exportedJobs = new LinkedList<>();
 

@@ -59,10 +59,10 @@ public class MainApplicationTest {
     @Test
     public void load_main_application_and_import_sample_data() {
         container.instance().select(JobImporterApplication.class).get().importJobs();
-        final ElasticPathExporter exporter = container.instance().select(ElasticPathExporter.class).get();
+        final ElasticSearchExporter exporter = container.instance().select(ElasticSearchExporter.class).get();
         assertThat("dependency injection is broken", exporter, is(notNullValue()));
         System.out.printf("exporter=%s\n", exporter);
-        assertThat(((ElasticPathExporterProxy) exporter).getExportedJobs().size(), is(1));
+        assertThat(((ElasticSearchExporterProxy) exporter).getExportedJobs().size(), is(1));
     }
 
 }
