@@ -23,6 +23,16 @@ I used an old [Astah UML Professional (version 6)](http://astah.net/editions/pro
 
 ![UML Sequence Diagram for the exercise](src/design/SD01%20Job%20Bundle%20Importer.png)
 
+And the class diagrams
+
+![UML Package diagram](src/design/CD01%20Job%20Bundle%20Importer%20Classes.png)
+
+and
+
+![UML Package diagram](src/design/CD02%20Job%20Bundle%20Packages.png)
+
+
+
 
 
 # Original Exercise
