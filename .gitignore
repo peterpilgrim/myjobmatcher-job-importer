@@ -25,6 +25,7 @@ out/*
 SampleRunner
 build/*
 build
+classes
 classes/*.class
 .svn/*
 *.tmp
