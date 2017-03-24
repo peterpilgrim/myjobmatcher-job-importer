@@ -34,7 +34,7 @@ public class NormalizerDefaultTest {
 
     public static final String UTF8_TEXT = "abcdefghijklmnopqrstuvwxyz0123456789";
     public static final String NON_UTF8_TEXT_INPUT = "LONDON 〠.〠";
-    public static final String NON_UTF8_TEXT_OUTPUT = "LONDON .";
+    public static final String NON_UTF8_TEXT_OUTPUT = "LONDON ?.?";
     private Normalizer normalizer;
 
     @Before
@@ -43,7 +43,8 @@ public class NormalizerDefaultTest {
     }
 
     /**
-     * Tests break with Gradle. However works inside the IDE. Maybe the Gradle deamon
+     * Test method breaks inside the IDE. However this is test works outside of the IDE correctly with Gradle.
+     * Charset UTF8 is supposed to replace non UTF8 characters with question marks.
      */
     @Test
     @Ignore
